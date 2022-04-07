@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.ubaya.uts_ubayalibrary_160419039.view.HomeFragment"
+        android:label="Main Menu"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/actionHomeDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemBorrow"
+        android:name="com.ubaya.uts_ubayalibrary_160419039.view.BorrowedFragment"
+        android:label="Borrowed Book"
+        tools:layout="@layout/fragment_borrowed" >
+        <action
+            android:id="@+id/actionBorrowDetail"
+            app:destination="@id/borrowDetailFragment" />
+        <action
+            android:id="@+id/actionBorrowHistoryFragment"
+            app:destination="@id/borrowHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFav"
+        android:name="com.ubaya.uts_ubayalibrary_160419039.view.FavouriteFragment"
+        android:label="Favourite Books"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/actionFavDetailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.ubaya.uts_ubayalibrary_160419039.view.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/actionEditProfile"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.ubaya.uts_ubayalibrary_160419039.view.DetailFragment"
+        android:label="Books"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="bookId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/borrowDetailFragment"
+        android:name="com.ubaya.uts_ubayalibrary_160419039.view.BorrowDetailFragment"
+        android:label="Borrow"
+        tools:layout="@layout/fragment_borrow_detail">
+        <argument
+            android:name="borrowId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/borrowHistoryFragment"
+        android:name="com.ubaya.uts_ubayalibrary_160419039.view.BorrowHistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_borrow_history">
+        <action
+            android:id="@+id/actionDetailHistoryFragment"
+            app:destination="@id/borrowDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.ubaya.uts_ubayalibrary_160419039.view.EditProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile" />
+</navigation>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgViewDetailBook"
+            android:layout_width="125dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="50dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txtBookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toEndOf="@+id/imgViewDetailBook"
+            app:layout_constraintTop_toTopOf="@+id/imgViewDetailBook" />
+
+        <TextView
+            android:id="@+id/txtTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/txtBookTitle"
+            app:layout_constraintTop_toBottomOf="@+id/txtBookTitle" />
+
+        <TextView
+            android:id="@+id/txtBookGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTanggal"
+            app:layout_constraintTop_toBottomOf="@+id/txtTanggal" />
+
+        <TextView
+            android:id="@+id/txtBookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/txtBookGenre"
+            app:layout_constraintTop_toBottomOf="@+id/txtBookGenre" />
+
+        <TextView
+            android:id="@+id/txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif-black"
+            android:text="RIngkasan"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgViewDetailBook" />
+
+        <TextView
+            android:id="@+id/txtSummary"
+            android:layout_width="0dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtView" />
+
+        <Button
+            android:id="@+id/btnBorrow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Pinjam"
+            app:layout_constraintEnd_toEndOf="@+id/txtSummary"
+            app:layout_constraintStart_toStartOf="@+id/txtSummary"
+            app:layout_constraintTop_toBottomOf="@+id/txtSummary" />
+
+        <ProgressBar
+            android:id="@+id/progressBarDetailBook"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imgViewDetailBook"
+            app:layout_constraintEnd_toEndOf="@+id/imgViewDetailBook"
+            app:layout_constraintStart_toStartOf="@+id/imgViewDetailBook"
+            app:layout_constraintTop_toTopOf="@+id/imgViewDetailBook" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
